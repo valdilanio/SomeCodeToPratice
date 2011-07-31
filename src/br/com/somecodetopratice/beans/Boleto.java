@@ -2,126 +2,125 @@ package br.com.somecodetopratice.beans;
 
 public class Boleto {
 	
-	public void setCEDENTE(String cEDENTE) {
-		CEDENTE = cEDENTE;
+	public String getCedente() {
+		return cedente;
 	}
-	public String getCEDENTE() {
-		return CEDENTE;
+	public String getBanco() {
+		return banco;
+	}
+	public String getNumeroagencia() {
+		return numeroagencia;
+	}
+	public String getNumeroconta() {
+		return numeroconta;
+	}
+	public String getAssinatura() {
+		return assinatura;
+	}
+	public String getDataemissao() {
+		return dataemissao;
+	}
+	public String getDataprocessamento() {
+		return dataprocessamento;
+	}
+	public String getDatavencimento() {
+		return datavencimento;
+	}
+	public String getNomesacado() {
+		return nomesacado;
+	}
+	public String getEnderecosacado() {
+		return enderecosacado;
+	}
+	public String getCidadesacado() {
+		return cidadesacado;
+	}
+	public String getUfsacado() {
+		return ufsacado;
+	}
+	public String getCepsacado() {
+		return cepsacado;
+	}
+	public String getCpfsacado() {
+		return cpfsacado;
+	}
+	public String getNumeropedido() {
+		return numeropedido;
+	}
+	public String getValordocumentoformatado() {
+		return valordocumentoformatado;
+	}
+	public String getShoppingid() {
+		return shoppingid;
+	}
+	public void setCedente(String cedente) {
+		this.cedente = cedente;
+	}
+	public void setBanco(String banco) {
+		this.banco = banco;
+	}
+	public void setNumeroagencia(String numeroagencia) {
+		this.numeroagencia = numeroagencia;
+	}
+	public void setNumeroconta(String numeroconta) {
+		this.numeroconta = numeroconta;
+	}
+	public void setAssinatura(String assinatura) {
+		this.assinatura = assinatura;
+	}
+	public void setDataemissao(String dataemissao) {
+		this.dataemissao = dataemissao;
+	}
+	public void setDataprocessamento(String dataprocessamento) {
+		this.dataprocessamento = dataprocessamento;
+	}
+	public void setDatavencimento(String datavencimento) {
+		this.datavencimento = datavencimento;
+	}
+	public void setNomesacado(String nomesacado) {
+		this.nomesacado = nomesacado;
+	}
+	public void setEnderecosacado(String enderecosacado) {
+		this.enderecosacado = enderecosacado;
+	}
+	public void setCidadesacado(String cidadesacado) {
+		this.cidadesacado = cidadesacado;
+	}
+	public void setUfsacado(String ufsacado) {
+		this.ufsacado = ufsacado;
+	}
+	public void setCepsacado(String cepsacado) {
+		this.cepsacado = cepsacado;
+	}
+	public void setCpfsacado(String cpfsacado) {
+		this.cpfsacado = cpfsacado;
+	}
+	public void setNumeropedido(String numeropedido) {
+		this.numeropedido = numeropedido;
+	}
+	public void setValordocumentoformatado(String valordocumentoformatado) {
+		this.valordocumentoformatado = valordocumentoformatado;
+	}
+	public void setShoppingid(String shoppingid) {
+		this.shoppingid = shoppingid;
 	}
 	
-	public String getBANCO() {
-		return BANCO;
-	}
-	public void setBANCO(String bANCO) {
-		BANCO = bANCO;
-	}
-	public String getNUMEROAGENCIA() {
-		return NUMEROAGENCIA;
-	}
-	public void setNUMEROAGENCIA(String nUMEROAGENCIA) {
-		NUMEROAGENCIA = nUMEROAGENCIA;
-	}
-	public String getNUMEROCONTA() {
-		return NUMEROCONTA;
-	}
-	public void setNUMEROCONTA(String nUMEROCONTA) {
-		NUMEROCONTA = nUMEROCONTA;
-	}
-	public String getASSINATURA() {
-		return ASSINATURA;
-	}
-	public void setASSINATURA(String aSSINATURA) {
-		ASSINATURA = aSSINATURA;
-	}
-	public String getDATAEMISSAO() {
-		return DATAEMISSAO;
-	}
-	public void setDATAEMISSAO(String dATAEMISSAO) {
-		DATAEMISSAO = dATAEMISSAO;
-	}
-	public String getDATAPROCESSAMENTO() {
-		return DATAPROCESSAMENTO;
-	}
-	public void setDATAPROCESSAMENTO(String dATAPROCESSAMENTO) {
-		DATAPROCESSAMENTO = dATAPROCESSAMENTO;
-	}
-	public String getDATAVENCIMENTO() {
-		return DATAVENCIMENTO;
-	}
-	public void setDATAVENCIMENTO(String dATAVENCIMENTO) {
-		DATAVENCIMENTO = dATAVENCIMENTO;
-	}
-	public String getNOMESACADO() {
-		return NOMESACADO;
-	}
-	public void setNOMESACADO(String nOMESACADO) {
-		NOMESACADO = nOMESACADO;
-	}
-	public String getENDERECOSACADO() {
-		return ENDERECOSACADO;
-	}
-	public void setENDERECOSACADO(String eNDERECOSACADO) {
-		ENDERECOSACADO = eNDERECOSACADO;
-	}
-	public String getCIDADESACADO() {
-		return CIDADESACADO;
-	}
-	public void setCIDADESACADO(String cIDADESACADO) {
-		CIDADESACADO = cIDADESACADO;
-	}
-	public String getUFSACADO() {
-		return UFSACADO;
-	}
-	public void setUFSACADO(String uFSACADO) {
-		UFSACADO = uFSACADO;
-	}
-	public String getCEPSACADO() {
-		return CEPSACADO;
-	}
-	public void setCEPSACADO(String cEPSACADO) {
-		CEPSACADO = cEPSACADO;
-	}
-	public String getCPFSACADO() {
-		return CPFSACADO;
-	}
-	public void setCPFSACADO(String cPFSACADO) {
-		CPFSACADO = cPFSACADO;
-	}
-	public String getNUMEROPEDIDO() {
-		return NUMEROPEDIDO;
-	}
-	public void setNUMEROPEDIDO(String nUMEROPEDIDO) {
-		NUMEROPEDIDO = nUMEROPEDIDO;
-	}
-	public String getVALORDOCUMENTOFORMATADO() {
-		return VALORDOCUMENTOFORMATADO;
-	}
-	public void setVALORDOCUMENTOFORMATADO(String vALORDOCUMENTOFORMATADO) {
-		VALORDOCUMENTOFORMATADO = vALORDOCUMENTOFORMATADO;
-	}
-	public String getSHOPPINGID() {
-		return SHOPPINGID;
-	}
-	public void setSHOPPINGID(String sHOPPINGID) {
-		SHOPPINGID = sHOPPINGID;
-	}
-	
-	private String CEDENTE;
-	private String BANCO;
-	private String NUMEROAGENCIA;
-	private String NUMEROCONTA;
-	private String ASSINATURA;
-	private String DATAEMISSAO;
-	private String DATAPROCESSAMENTO;
-	private String DATAVENCIMENTO;
-	private String NOMESACADO;
-	private String ENDERECOSACADO;
-	private String CIDADESACADO;
-	private String UFSACADO;
-	private String CEPSACADO;
-	private String CPFSACADO;
-	private String NUMEROPEDIDO;
-	private String VALORDOCUMENTOFORMATADO;
-	private String SHOPPINGID;
+	private String cedente;
+	private String banco;
+	private String numeroagencia;
+	private String numeroconta;
+	private String assinatura;
+	private String dataemissao;
+	private String dataprocessamento;
+	private String datavencimento;
+	private String nomesacado;
+	private String enderecosacado;
+	private String cidadesacado;
+	private String ufsacado;
+	private String cepsacado;
+	private String cpfsacado;
+	private String numeropedido;
+	private String valordocumentoformatado;
+	private String shoppingid;
 
 }

@@ -22,7 +22,7 @@ public class BoletoWriterDriver implements ExtendedHierarchicalStreamWriter {
 		for (int i = 0; i < indent; i++) { 
 			out.print("  "); 
 		} 
-		out.print(String.format("<%s>", name)); 
+		out.print(String.format("<%s>", name.toUpperCase())); 
 		indent++; 
 	} 
 	
