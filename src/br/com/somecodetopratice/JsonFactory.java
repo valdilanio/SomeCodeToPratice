@@ -1,6 +1,8 @@
 package br.com.somecodetopratice;
 
 import java.lang.reflect.Field;
+import java.util.Arrays;
+import java.util.List;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
@@ -8,56 +10,61 @@ import com.thoughtworks.xstream.io.json.JettisonMappedXmlDriver;
 public class JsonFactory {
 
 	private final XStream xs;
-	private String [] excludeProperties;
-	private String [] onlyProperties;
+	private String [] excludeFields;
+	private String [] onlyFields;
 	private String json;
 
 	public JsonFactory() {
 		xs = new XStream(new JettisonMappedXmlDriver());
+		xs.setMode(XStream.NO_REFERENCES);
 	}
 
 	public <T> void jsonOf(T bean, String alias){
 		xs.aliasPackage("", alias);
 		xs.alias(alias, bean.getClass());
-		excludeProperties(bean);
-		json = xs.toXML(bean);
+		excludeFields(bean);
+		onlyFields(bean);
+		setJson(xs.toXML(bean));
 	}
 
-	private <T> void excludeProperties(T bean) {
+	private <T> void excludeFields(T bean) {
+		if(excludeFields != null) {
+			System.out.println("aqui");
+			for(String field : excludeFields){
+				xs.omitField(bean.getClass(), field);
+			}
+		}
+	}
 
-		if(excludeProperties == null && onlyProperties != null){
+	private <T> void onlyFields(T bean) {
+		if(onlyFields != null) {
+			String name;
 			Field [] fields = bean.getClass().getDeclaredFields();
-			for(Field field : fields){
-
+			List <String> fieldsToOmit = Arrays.asList(onlyFields);
+			for (Field field : fields) {
+				name = field.getName();
+				if(!fieldsToOmit.contains(name)){
+					xs.omitField(bean.getClass(), name);
+				}
 			}
+			
 		}
-
-		if(excludeProperties != null) {
-			for(String property : excludeProperties){
-				xs.omitField(bean.getClass(), property);
-			}
-		}
-	}
-
-	private <T> void onlyProperties(final T bean) {
-		if(onlyProperties != null) {
-			Field [] fields = bean.getClass().getDeclaredFields();
-			for(String property : excludeProperties){
-				xs.omitField(bean.getClass(), property);
-			}
-		}
-	}
-
-	public void setExcludeProperties(String [] excludeProperties) {
-		this.excludeProperties = excludeProperties;
-	}
-
-	public void setOnlyProperties(String [] onlyProperties) {
-		this.onlyProperties = onlyProperties;
 	}
 
 	public String getJson(){
 		return json;
+	}
+
+	public void setExcludeFields(String [] excludeFields) {
+		this.excludeFields = excludeFields;
+	}
+
+	public void setJson(String json) {
+		this.json = json;
+	}
+
+	public void setOnlyFields(String [] onlyFields) {
+		this.onlyFields = onlyFields;
 	}
 
 }
